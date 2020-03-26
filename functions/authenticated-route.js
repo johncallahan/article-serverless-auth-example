@@ -1,6 +1,6 @@
 const jwt = require('jsonwebtoken');
 
-const authWrapper = (...args) => {
+const authWrapper = fn => (...args) => {
     const [context] = args;
     // using context.queryStringParameters.token as a token holder is for the sake of the demo.
     // use cookies or an authorization header if you want to use it in prod
